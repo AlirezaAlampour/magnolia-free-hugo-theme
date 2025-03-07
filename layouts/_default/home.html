@@ -2,12 +2,14 @@
 
 <div class="row gx-5 gy-3 mb-5">
   <div class="col-lg-4">
-    <!-- profile picture-->
+    {{ with resources.GetMatch "img/profile.*" }}
     <img
       class="rounded profile-img img-fluid shadow"
-      src="/themes/Magnolia/static/img/profile.webp"
+      src="{{ .RelPermalink }}"
       alt="Main image"
     />
+  {{ end }}
+  
   </div>
 
   <div class="col-lg-8">
